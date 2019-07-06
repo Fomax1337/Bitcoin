@@ -1,0 +1,160 @@
+@import "variables.less";
+
+.steps {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+
+.page-main__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.steps__title {
+  font-size: 24px;
+  align-self: center;
+}
+
+.steps__list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 10px;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+
+  counter-reset: steps;
+}
+
+.steps__item {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.steps__item:last-child {
+  margin-bottom: 20px;
+}
+
+.step__title {
+  font-weight: bold;
+}
+
+.step__title::before {
+  position: absolute;
+  left: 10px;
+  counter-increment: steps;
+  content: "0" counter(steps);
+  color: #c2b4a4;
+  font-size: 115px;
+  font-family: "exo-2-light";
+  font-weight: normal;
+  line-height: 1;
+  opacity: 0.2;
+  top: 0px;
+}
+
+.step__title,
+.step__description {
+  margin: 0;
+  padding: 0;
+}
+
+.step__title {
+  display: block;
+  margin-top: 30px;
+}
+
+.steps-button {
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px 0;
+  margin-bottom: 30px;
+
+  text-align: center;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .steps {
+    width: 768px;
+    background-color: #f8f8f8;
+  }
+
+  .steps__title {
+    font-size: 28px;
+  }
+
+  .steps__item {
+    display: flex;
+    flex-direction: column;
+
+    width: 280px;
+
+    text-align: right;
+  }
+
+  .steps__item:nth-child(2n) {
+    align-self: flex-end;
+    text-align: left;
+  }
+
+  .step__title::before {
+    right: 0;
+    font-size: 150px;
+  }
+
+  .step__description::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  .step__description::after {
+    top: 50px;
+    right: -30px;
+    padding: 6px;
+    background: #aea9a3;
+    border-radius: 50%;
+  }
+
+  .steps__item:nth-child(2n) .step__description::after {
+        right: 300px;
+  }
+
+  .steps__item::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    background: url(../img/arrow-right.svg) no-repeat;
+    width: 149px;
+    height: 210px;
+    top: 60px;
+    right: -167px;
+    z-index: 10;
+  }
+
+  .steps__item:nth-child(2n)::before {
+    transform: scale(-1,1.1);
+    right: 299px;
+  }
+
+  .steps__item:last-child::before {
+    background: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .steps {
+    width: 1200px;
+    background-color: #f8f8f8;
+  }
+
+  .page-main__wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}

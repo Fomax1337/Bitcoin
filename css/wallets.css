@@ -1,0 +1,87 @@
+.wallets {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+.wallets__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wallets__title {
+  font-size: 24px;
+  align-self: center;
+}
+.wallets__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 25px;
+  padding: 0;
+  list-style: none;
+}
+.wallets__item {
+  position: relative;
+  border: 1px solid #ab9d8c;
+}
+.wallet__title {
+  padding: 0;
+  margin: 0;
+  margin: 20px 0;
+  margin-left: 10px;
+  font-weight: normal;
+}
+.wallets__item .wallet__title::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  background: url(../img/statistics.svg) no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+}
+.wallet__balance {
+  margin: 0;
+  padding: 0;
+}
+.wallet__mon {
+  display: inline-block;
+  margin-left: 45px;
+  margin-bottom: 10px;
+}
+.wallets__item .wallet__mon::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  background: url(../img/litecoin.svg) no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 65px;
+  left: 10px;
+  z-index: 10;
+}
+.wallet__small-mon {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+  font-size: 16px;
+}
+.wallet__small-mon::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  background: url(../img/coin.svg) no-repeat;
+  width: 15px;
+  height: 15px;
+  top: 109px;
+  left: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+.wallet__button {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
