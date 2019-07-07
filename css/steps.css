@@ -59,9 +59,15 @@
   margin-bottom: 30px;
   text-align: center;
   text-decoration: none;
-  color: #c2b4a4;
-  border: 2px solid #c2b4a4;
+  color: #8a6d4a;
+  border: 2px solid #8a6d4a;
   border-radius: 20px;
+}
+.steps__button:hover,
+.steps__button:active,
+.steps__button:focus {
+  background-color: #8a6d4a;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .steps {

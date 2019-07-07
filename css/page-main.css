@@ -4,7 +4,6 @@
 }
 @media (min-width: 1024px) {
   .page-main {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 920px;
@@ -14,7 +13,6 @@
 @media (min-width: 1440px) {
   .page-main {
     width: 100%;
-    margin: 0 auto;
     background-color: #eee9e6;
   }
 }
