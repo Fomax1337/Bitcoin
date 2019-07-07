@@ -4,3 +4,21 @@
   display: flex;
   flex-direction: column;
 }
+
+@media (min-width: @laptop-width) {
+  .page-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 920px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee9e6;
+  }
+}

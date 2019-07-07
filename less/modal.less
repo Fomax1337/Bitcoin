@@ -1,0 +1,134 @@
+@import "variables.less";
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+  background-color: #f8f8f8;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 300px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.modal__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  margin: 0;
+  padding: 0;
+}
+
+.mod__but {
+  width: 70px;
+  padding: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #b2a08c;
+  border-radius: 15px;
+}
+
+.modal__text {
+  position: relative;
+  font-size: 16px;
+}
+
+.modal__wrapper > p {
+  margin: 0;
+}
+
+.modal__icon::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  background: url(../img/copy.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  z-index: 20;
+  bottom: 77px;
+  right: 30px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal__show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 420px;
+    margin-left: -210px;
+  }
+
+  .modal__wrapper {
+    width: 400px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .modal__button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+  }
+
+  .mod__but {
+    margin-top: 0px;
+  }
+
+  .modal__wrapper > p {
+    margin: 20px 0;
+  }
+
+  .modal__icon::before {
+    right: 80px;
+  }
+}
+
+@media (min-width: @laptop-width) {
+  .modal {
+    top: 120px;
+  }
+}

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/page-main.css">
     <link rel="stylesheet" href="css/steps.css">
     <link rel="stylesheet" href="css/wallets.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   </head>
   <body>
     <header class="page-header">
@@ -16,33 +19,27 @@
     </header>
     <main class="page-main">
       <section class="steps">
-        <div class="page-main__wrapper slider">
+        <div class="page-main__wrapper">
           <h2 class="steps__title">How it works?</h2>
-          <ul class="steps__list slider__list">
-            <li class="steps__item slider__item">
+          <ul class="steps__list">
+            <li class="steps__item">
               <span class="step__title">Open an account</span>
               <p class="step__description">Enter your e-mail and confirm it, verify your phone number with a text message.</p>
             </li>
-            <li class="steps__item slider__item">
+            <li class="steps__item">
               <span class="step__title">Connect your bank account</span>
               <p class="step__description">Complete some verification steps and connect your bank account or use your debit card to purchase.</p>
             </li>
-            <li class="steps__item slider__item">
+            <li class="steps__item">
               <span class="step__title">Raise your limits</span>
               <p class="step__description">We can raise your purchasing limits with additional verification. We can even set custom limits for you.</p>
             </li>
-            <li class="steps__item slider__item">
+            <li class="steps__item">
               <span class="step__title">Secure crypto wallet</span>
               <p class="step__description">We'll, create secure cryptocurrency wallet for you to deliver your purchases. Use it as you please!</p>
             </li>
           </ul>
-          <a class="steps-button" type="button">Get Started Now</a>
-          <!-- <p class="steps__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-            <button class="slider__toggle" type="button">4</button>
-          </p> -->
+          <a href="#" class="steps__button">Get Started Now</a>
         </div>
       </section>
 
@@ -51,15 +48,49 @@
           <h2 class="wallets__title">Сryptocurrency Wallets</h2>
           <ul class="wallets__list slider__list">
             <li class="wallets__item slider__item">
-              <h3 class="wallet__title">ETN Balance</h3>
+              <h3 class="wallet__title wallet__icon--eth">ETH Balance</h3>
               <p class="wallet__balance">
                 <b class="wallet__mon">12,522.03</b>
                 <small class="wallet__legend">ETH</small>
               </p>
               <b class="wallet__small-mon">12522.3</b>
               <p class="wallet__button">
-              <a class="wallet__rec wallet__rec--down" type="button" name="button">Recieve</a>
-              <a class="wallet__send wallet__send--up" type="button" name="button">Send</a>
+                <a class="wallet__rec wallet__but wallet__rec-1">Recieve</a>
+                <a class="wallet__send wallet__but">Send</a>
+              </p>
+            </li>
+            <li class="wallets__item slider__item">
+              <h3 class="wallet__title wallet__icon--ltc">LTC Balance</h3>
+              <p class="wallet__balance">
+                <b class="wallet__mon">12,522.03</b>
+                <small class="wallet__legend">LTC</small>
+              </p>
+              <b class="wallet__small-mon">12522.3</b>
+              <p class="wallet__button">
+                <a class="wallet__rec wallet__but wallet__rec-2">Recieve</a>
+                <a class="wallet__send wallet__but">Send</a>
+              </p>
+            </li>
+            <li class="wallets__item slider__item">
+              <h3 class="wallet__title wallet__icon--btc">BTC Balance</h3>
+              <p class="wallet__balance">
+                <b class="wallet__mon">12,522.03</b>
+                <small class="wallet__legend">BTC</small>
+              </p>
+              <b class="wallet__small-mon">12522.3</b>
+              <p class="wallet__button">
+                <a class="wallet__rec wallet__but wallet__rec-3">Recieve</a>
+                <a class="wallet__send wallet__but">Send</a>
+              </p>
+            </li>
+
+          </ul>
+          <ul class="wallets__list wallets__list-sm slider__list">
+            <li class="wallets__item slider__item">
+              <h3 class="wallet__title">ETH Balance</h3>
+              <p class="wallet__balance">
+                <b class="wallet__mon">12,522.03</b>
+                <small class="wallet__legend">ETH</small>
               </p>
             </li>
             <li class="wallets__item slider__item">
@@ -68,9 +99,6 @@
                 <b class="wallet__mon">12,522.03</b>
                 <small class="wallet__legend">LTC</small>
               </p>
-              <b class="wallet__small-mon">12522.3</b>
-              <button class="wallet__rec wallet__rec--down" type="button" name="button">Recieve</button>
-              <button class="wallet__send wallet__send--up" type="button" name="button">Send</button>
             </li>
             <li class="wallets__item slider__item">
               <h3 class="wallet__title">BTC Balance</h3>
@@ -78,42 +106,33 @@
                 <b class="wallet__mon">12,522.03</b>
                 <small class="wallet__legend">BTC</small>
               </p>
-              <b class="wallet__small-mon">12522.3</b>
-              <button class="wallet__rec wallet__rec--down" type="button" name="button">Recieve</button>
-              <button class="wallet__send wallet__send--up" type="button" name="button">Send</button>
             </li>
           </ul>
-          <ul class="wallets__list-sm slider__list">
-            <li class="wallets__item-sm slider__item">
-              <h3 class="wallet__title">ETN Balance</h3>
-              <p class="wallet__balance">
-                <b class="wallet__mon">12,522.03</b>
-                <small class="wallet__legend">LTC</small>
-              </p>
-            </li>
-            <li class="wallets__item-sm slider__item">
-              <h3 class="wallet__title">LTC Balance</h3>
-              <p class="wallet__balance">
-                <b class="wallet__mon">12,522.03</b>
-                <small class="wallet__legend">LTC</small>
-              </p>
-            </li>
-            <li class="wallets__item-sm slider__item">
-              <h3 class="wallet__title">BTC Balance</h3>
-              <p class="wallet__balance">
-                <b class="wallet__mon">12,522.03</b>
-                <small class="wallet__legend">BTC</small>
-              </p>
-            </li>
-          </ul>
-          <p class="wallets__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
         </div>
       </section>
 
     </main>
+
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Recieve coins to Wallet</h2>
+        <div class="wrapper">
+          <img src="img/qr-code.png" width="160" height="160" alt="">
+          <p class="modal__button">
+          <a href="" class="mod__but" type="button" name="button">Email</a>
+          <a href="" class="mod__but" type="button" name="button">Print</a>
+          </p>
+        </div>
+        <p class="modal-text modal__icon">4jj4obo48v94kbpv0kgjvlh0</p>
+        <a href="" class="mod__but modal__close">Close</a>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/popupModal.js"></script>
+
+    </script>
   </body>
 </html>
